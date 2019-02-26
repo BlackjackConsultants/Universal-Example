@@ -2,7 +2,7 @@
   "name": "functions",
   "scripts": {
     "lint": "tslint --project tsconfig.json",
-    "build": "tsc",
+    "build": "node cp-angular && tsc",
     "serve": "npm run build && firebase serve --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
@@ -12,9 +12,16 @@
   "main": "lib/index.js",
   "dependencies": {
     "firebase-admin": "~7.0.0",
-    "firebase-functions": "^2.2.0"
+    "firebase-functions": "^2.2.0",
+    "fs-extra": "^7.0.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/duplexify": "^3.6.0",
+    "@types/jsonwebtoken": "^8.3.0",
+    "@types/lodash": "^4.14.121",
+    "@types/long": "^4.0.0",
+    "@types/request": "^2.48.1",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2"
   },

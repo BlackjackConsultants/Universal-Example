@@ -17,6 +17,8 @@ module.exports = {
   output: {
     // Puts the output at the root of the dist folder
     path: path.join(__dirname, 'dist'),
+    library: 'app',
+    libraryTarget: 'umd',
     filename: '[name].js'
   },
   module: {
@@ -27,7 +29,7 @@ module.exports = {
         // Removing this will cause deprecation warnings to appear.
         test: /(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/,
         parser: { system: true },
-      },
+      }
     ]
   },
   plugins: [
